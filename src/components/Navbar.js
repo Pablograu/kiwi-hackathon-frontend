@@ -1,23 +1,35 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withAuth } from '../providers/AuthProvider';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { withAuth } from "../providers/AuthProvider";
 
 class Navbar extends Component {
   render() {
     const { isLogged, user, logout } = this.props;
     const { username } = user;
     if (isLogged) {
-      return <div>
-        <p>username: { username }</p>
-        <p onClick={logout}>Logout</p>
-      </div>
+      return (
+        <div>
+          <p>username: {username}</p>
+          <p onClick={logout}>Logout</p>
+        </div>
+      );
     } else {
-      return <div>
-        <Link to='/login'>Login</Link>
-        <Link to='/signup'>Signup</Link>
-      </div>
+      return (
+        <div className="NavBar">
+          <Link to="/">
+            <img src="tequila-logo.svg" alt="tequila-sunrise-logo" />
+          </Link>
+          <div>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+            <Link to="/signup" className="nav-link">
+              Signup
+            </Link>
+          </div>
+        </div>
+      );
     }
-  
   }
 }
 
