@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withAuth } from '../providers/AuthProvider';
 import { Link } from 'react-router-dom';
+import { Button, InputField } from "@kiwicom/orbit-components/lib";
 
 class Login extends Component {
   state = {
@@ -18,6 +19,7 @@ class Login extends Component {
   }
 
   handleChange = (event) => {  
+    console.log(event.target.name)
     const {name, value} = event.target;
     this.setState({[name]: value});
   }
@@ -26,12 +28,28 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Login" />
+        <form>
+          <InputField
+            label="Username"
+            type="text"
+            name="username"
+            value={username}
+            placeholder="Placeholder"
+            onChange={this.handleChange}
+            required
+          />
+          <InputField
+            type="password"
+            label="Password"
+            name="password"
+            value={password}
+            placeholder="Password"
+            onChange={this.handleChange}
+            required
+          />
+          <Button onClick={this.handleFormSubmit}>
+            Login
+          </Button>
         </form>
         <p>You don't have an account? 
           <Link to={"/signup"}> SignUp</Link>

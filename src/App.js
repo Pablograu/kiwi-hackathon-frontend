@@ -9,6 +9,7 @@ import Winner from "./pages/Winner";
 import Main from "./pages/Main";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Booking from "./pages/Booking";
 import AuthProvider from "./providers/AuthProvider";
 import "./App.css";
 
@@ -24,6 +25,7 @@ class App extends Component {
             <AnonRoute path="/login" component={Login} />
             <PrivateRoute exact path="/private" component={Private} />
             <PrivateRoute path="/private/winner" component={Winner} />
+            <PrivateRoute path="/booking" component={Booking} />
           </Switch>
           <Footer />
         </div>

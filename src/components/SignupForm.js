@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "@kiwicom/orbit-components/lib";
+import { Button, InputField } from "@kiwicom/orbit-components/lib";
 
 class SignupForn extends Component {
   render() {
@@ -8,12 +8,34 @@ class SignupForn extends Component {
     return (
       <div>
         <form>
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={handleChange}/>
-          <label>Email:</label>
-          <input type="email" name="email" value={email} onChange={handleChange} />
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={handleChange} />
+          <InputField
+            label="Username"
+            type="text"
+            name="username"
+            value={username}
+            placeholder="Placeholder"
+            onChange={handleChange}
+            required
+          />
+          <InputField
+            type="email"
+            label="Email"
+            value={email}
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            help={<div />}
+            required
+          />
+          <InputField
+            type="password"
+            label="Password"
+            name="password"
+            value={password}
+            placeholder="Password"
+            onChange={handleChange}
+            required
+          />
           <Button onClick={handleNextStep}>
             Next
           </Button>

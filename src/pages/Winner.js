@@ -5,10 +5,15 @@ import CodeSection from '../components/CodeSection'
 import UpgradeSection from '../components/UpgradeSection'
 
 class Winner extends Component {
+
+  handleClick = () => {
+    this.props.history.push('/booking')
+  }
+
   render() {
     return (
       <div>
-        <WinnerSection/>
+        <WinnerSection handleClick={this.handleClick}/>
         <CodeSection/>
         <UpgradeSection/>
       </div>

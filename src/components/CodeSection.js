@@ -13,7 +13,7 @@ class CodeSection extends Component {
         <div className="code-part">
           <p className="code">800813Z</p>
           <p>copy code</p>
-          <Button size='small'>
+          <Button size='small' href="https://kiwi.com">
             Go to kiwi.com
           </Button>
         </div>

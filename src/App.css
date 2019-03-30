@@ -197,10 +197,10 @@ p,h3 {
 }
 
 .countdown-section .title{
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   font-weight: bold;
-  padding-top: 20%;
+  padding-top: 100px;
 }
 
 .count-down-container {
@@ -215,7 +215,7 @@ p,h3 {
 }
 
 .count-down-part p:first-child {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .count-down-part p:last-child {
@@ -233,11 +233,12 @@ p,h3 {
 
 .code-section div{
   margin: auto;
-  width: 45%;
+  width: 30%;
 }
 
 .code-section p{
   margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .code-part {
@@ -254,8 +255,9 @@ p,h3 {
 }
 
 p.code{
+  margin: auto;
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 24px;
   background-color: white;
   padding: 10px;
   border: solid 1px rgb(174, 174, 174);

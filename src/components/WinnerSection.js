@@ -8,7 +8,7 @@ export default class WinnerSection extends Component {
         <div>
           <p>Congratulations!</p>
           <p>You are the winner!</p>
-          <Button size='small'>
+          <Button size='small' onClick={this.props.handleClick}>
               PROCESS TO BOOK YOUR FLIGHT
           </Button>
         </div>
