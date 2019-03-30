@@ -26,6 +26,7 @@ body {
 
 .NavBar {
   position: sticky;
+  z-index: 1;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -71,7 +72,7 @@ body {
 
 /* ---- How does it work ---- */
 
-.how{
+.how {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -81,7 +82,7 @@ body {
 
 }
 
-.plans{
+.plans {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -105,6 +106,7 @@ body {
   height: 8rem;
   margin: 1rem 2rem;
 }
+
 /* Get discount */
 .getDiscount {
   text-align: center;
@@ -112,38 +114,33 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.getDiscount p{
+
+.getDiscount p {
   margin: 0;
 }
 
-@media (max-width: 375px) {
-  
-}
+@media (max-width: 375px) {}
 
 /* Get prize */
 
-.getPrizeContainer{
+.getPrizeContainer {
   display: flex;
   padding: 2.5rem;
   background-color: rgb(215, 228, 158)
 }
-.getPrizePhoto{
+
+.getPrizePhoto {
   /* width: 50% */
 }
-.getPrizePhoto img{
+
+.getPrizePhoto img {
   width: 100%;
 }
 
-.getPrizeText{
+.getPrizeText {
   padding-top: 5rem;
 }
-.getPrizeText button{
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border-style: none;
-  background-color: pink;
-  color: grey;
-}
+
 
 /* ---- Footer ---- */
 .foot {
@@ -159,11 +156,12 @@ body {
   display: flex;
   flex-direction: row;
   height: 1.2rem;
-  text-align: right;
-  padding: 1rem
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.2rem 0 0.2rem 0;
 }
 
-.foot-compo a{
+.foot-compo a {
   text-decoration: none;
   padding: 0.1rem
 }
@@ -179,21 +177,14 @@ body {
   height: 1.5rem;
   margin: 1rem;
 }
-<<<<<<< HEAD
-=======
 
 /* ---- Plan ---- */
 .plan-cards {
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-  justify-content: space-around;
+  <<<<<<< HEAD justify-content: space-around;
 }
 
 .plan-card {
   cursor: pointer;
 }
-=======
-}
->>>>>>> 1ca85f8b9a96553d5258e83e9a7471b1c3b9907c
->>>>>>> b71b4c1f8ed15d813ea75eaff16e1ed72c566830
