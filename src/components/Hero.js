@@ -6,19 +6,15 @@ export default function Hero() {
   return (
     <div className="hero container">
       <div className="hero-text">
-        <h1>Get the oportunnity of winning a great trip with Sunrise</h1>
+        <h1>The trip of your dreams is <span class="title-hero">colser than you think!</span></h1>
         <p>
-          Do you travel as much as you would like? Have you ever wanted to go to
-          Japan but you never find the time? Tequila Sunrise by Kiwi can get you
-          there, join our subscription plan and win a once in a life time trip
-          every month. Not convinced? what about a 5% discount in all of your
-          trips.
+          With FlyKiwi you have guaranteed discounts at kiwi.com and the awesome opportunity to win a trip to any part of the world!
         </p>
         <Link to="/signup" style={{ textDecoration: "none" }}>
           <Button>GET STARTED</Button>
         </Link>
       </div>
-      <img src="island-hero.jpeg" alt="img" />
+      <img src="miami_2.png" alt="img-presentation" />
     </div>
   );
 }

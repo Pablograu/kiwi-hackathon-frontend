@@ -51,6 +51,13 @@ h3 {
   color: black;
 }
 
+.nav-link.signup{
+  background-color: #00aa91;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+}
+
 /* ---- Hero ---- */
 
 .hero {
@@ -59,7 +66,6 @@ h3 {
   padding: 2rem;
   justify-content: baseline;
   align-items: center;
-  background-color: rgb(230, 228, 228);
 }
 
 .hero-text {
@@ -70,6 +76,10 @@ h3 {
   flex-direction: column;
   margin-right: 2rem;
 
+}
+
+.title-hero {
+  color: #00aa91
 }
 
 .hero img {
@@ -99,8 +109,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(230, 228, 228);
-
 }
 
 .how-boxes {
@@ -149,6 +157,23 @@ h3 {
   text-align: center;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  position: relative;
+}
+
+.getDiscount div{
+  overflow: hidden;
+  height: 400px;
+}
+
+.getDiscount img{
+  width: 100vw;
+}
+
+.getDiscount div:last-child{
+  position: absolute;
+  top: 200px;
+  left: 30vw;
+  color: white;
 }
 
 .getDiscount p {
@@ -162,7 +187,6 @@ h3 {
 .getPrizeContainer {
   display: flex;
   padding: 2.5rem;
-  background-color: rgb(230, 228, 228);
 }
 
 .getPrizePhoto {

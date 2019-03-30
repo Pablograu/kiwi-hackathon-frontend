@@ -50,10 +50,10 @@ class Navbar extends Component {
           </Link>
           <div>
             <Link to="/login" className="nav-link">
-              Login
+              Log In
             </Link>
-            <Link to="/signup" className="nav-link">
-              Signup
+            <Link to="/signup" className="nav-link signup">
+              Sign Up
             </Link>
           </div>
         </div>

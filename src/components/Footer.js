@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="foot-compo">
         <div className="links-foot">
           <a href="">Privacy</a>
-          <a href="">Hmm.. Cookies</a>
+          <a href="">Cookies Policy</a>
           <a href="">Terms and Conditions</a>
         </div>
         <div className="flykiwi">
