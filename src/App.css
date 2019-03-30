@@ -95,8 +95,11 @@ body {
 .getDiscount {
   text-align: center;
   background-color: #eac5c5;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.getDiscount p{
+  margin: 0;
 }
 
 @media (max-width: 375px) {
