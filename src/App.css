@@ -154,13 +154,14 @@ body {
 .foot-compo {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   height: 1.2rem;
+  text-align: right;
+  padding: 1rem
 }
 
-.foot-compo a {
+.foot-compo a{
   text-decoration: none;
+  padding: 0.1rem
 }
 
 .foot-sn {
