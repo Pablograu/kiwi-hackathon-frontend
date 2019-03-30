@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { withAuth } from '../providers/AuthProvider';
+import CountDown from '../components/CountDown'
+import CodeSection from '../components/CodeSection'
+
 class Private extends Component {
   render() {
-    const { user } = this.props
     return (
       <div>
-        <h1>Welcome {user.username}</h1>
+        <CountDown/>
+        <CodeSection/>
       </div>
     )
   }
