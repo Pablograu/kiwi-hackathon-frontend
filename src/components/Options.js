@@ -44,7 +44,7 @@ class Options extends Component {
           {this.state.randomFlights.map((flight, index) => {
             return(<TripSegment
               key={`id:${index}`}
-              carrier={flight.airlines[0]}
+              carrier={flight.cityTo}
               departure={flight.cityFrom}
               arrival={flight.cityTo}
               onClick={() => {

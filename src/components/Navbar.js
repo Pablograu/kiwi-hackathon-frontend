@@ -32,7 +32,7 @@ class Navbar extends Component {
           boxShadow: this.state.withShadow && "0px 0px 8px 2px #000000"
         }}>
         <Link to="/">
-            <img src={process.env.PUBLIC_URL + '/flykiwi.png'} alt="flykiwi-logo" />
+            <img src='/flykiwi.png' alt="flykiwi-logo" />
           </Link>
           <p className="nav-link logout" onClick={logout}>Logout</p>
         </div>
