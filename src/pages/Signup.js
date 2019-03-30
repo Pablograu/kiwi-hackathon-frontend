@@ -19,6 +19,7 @@ class Signup extends Component {
   };
 
   handleFormSubmit = event => {
+    console.log('heyy')
     event.preventDefault();
     const {
       username,

@@ -6,9 +6,9 @@ export default function GetPrize() {
   return (
     <div className="hero">
       <div className="hero-text getPrizeText">
-        <h2>Travel prize</h2>
+        <h2>Travel Giveaway</h2>
         <p>
-          With Sunrise you get great discounts in kiwi.com and the AWESOME
+          With FlyKiwi you get great discounts in kiwi.com and the AWESOME
           opportunity of winning a trip to any destination in the world, with
           tickets valued up until 1000€
         </p>

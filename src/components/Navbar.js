@@ -42,7 +42,7 @@ class Navbar extends Component {
         <div
           className="NavBar"
           style={{
-            boxShadow: this.state.withShadow && "0px 0px 8px 2px #000000"
+            boxShadow: this.state.withShadow && "1px 1px 4px 2px #cccc"
           }}
         >
           <Link to="/">
@@ -50,10 +50,10 @@ class Navbar extends Component {
           </Link>
           <div>
             <Link to="/login" className="nav-link">
-              Login
+              Log In
             </Link>
-            <Link to="/signup" className="nav-link">
-              Signup
+            <Link to="/signup" className="nav-link signup">
+              Sign Up
             </Link>
           </div>
         </div>

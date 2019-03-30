@@ -39,7 +39,7 @@ class PreferencesForm extends Component {
     } = this.props;
     return (
       <div style={{ height: "80vh" }}>
-        <form onSubmit={handleFormSubmit} className="access-form">
+        <form className="access-form">
           <InputField
             label="Origin:"
             type="text"
