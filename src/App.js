@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import GetDiscount from "./components/GetDiscount";
+import GetPrize from "./components/GetPrize";
 import Private from "./pages/Private";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -21,6 +22,7 @@ class App extends Component {
           <Hero />
           <HowItWorks />
           <GetDiscount />
+          <GetPrize/>
           <Switch>
             <AnonRoute path="/signup" component={Signup} />
             <AnonRoute path="/login" component={Login} />

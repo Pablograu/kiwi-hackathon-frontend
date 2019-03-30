@@ -99,3 +99,28 @@ body {
 @media (max-width: 375px) {
   
 }
+
+/* Get prize */
+
+.getPrizeContainer{
+  display: flex;
+  padding: 2.5rem;
+  background-color: rgb(215, 228, 158)
+}
+.getPrizePhoto{
+  width: 50%
+}
+.getPrizePhoto img{
+  width: 100%;
+}
+
+.getPrizeText{
+  padding-top: 5rem;
+}
+.getPrizeText button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  background-color: pink;
+  color: grey;
+}
