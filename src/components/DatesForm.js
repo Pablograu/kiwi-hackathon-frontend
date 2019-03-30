@@ -1,16 +1,36 @@
 import React, { Component } from 'react'
-import { Button } from "@kiwicom/orbit-components/lib";
+import { Button, InputField } from "@kiwicom/orbit-components/lib";
+import { withAuth } from '../providers/AuthProvider';
 
 class DatesForm extends Component {
   render() {
     return (
       <div>
-        <p>Choose dates between 30/05/2019 & 30/06/2019</p>
         <form>
-          <input disabled></input>
-          <input type="Date"></input>
-          <input type="Date"></input>
-          <Button size='small'>
+          <InputField 
+            disabled
+            label="From"
+            value={this.props.user.startingPoint}
+          />
+          <InputField
+            label="Departure"
+            type="date"
+            name="departure"
+            value={this.props.departure}
+            placeholder="Placeholder"
+            onChange={this.props.handleOnChange}
+            required
+          />
+           <InputField
+            label="Return"
+            type="date"
+            name="return"
+            value={this.props.return}
+            onChange={this.props.handleOnChange}
+            placeholder="Placeholder"
+            required
+          />
+          <Button size='small' onClick={this.props.handleNextStep}>
               Search
           </Button>
         </form>
@@ -19,4 +39,4 @@ class DatesForm extends Component {
   }
 }
 
-export default DatesForm;
+export default withAuth(DatesForm);
