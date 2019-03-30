@@ -1,33 +1,43 @@
-import React, { Component } from 'react';
-import { withAuth } from '../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { withAuth } from "../providers/AuthProvider";
+import { Link } from "react-router-dom";
 import { Button, InputField } from "@kiwicom/orbit-components/lib";
 
 class Login extends Component {
   state = {
     username: "",
-    password: "",
-  }
+    password: ""
+  };
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit = event => {
     event.preventDefault();
-    const { username, password } = this.state
+    const { username, password } = this.state;
 
-    this.props.login({ username, password })
+    this.props
+      .login({ username, password })
       .then(() => {})
-      .catch( error => console.log(error) )
-  }
+      .catch(error => console.log(error));
+  };
 
+<<<<<<< HEAD
   handleChange = (event) => {  
     const {name, value} = event.target;
     this.setState({[name]: value});
   }
+=======
+  handleChange = event => {
+    console.log(event.target.name);
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+>>>>>>> 3022c4db5d43beebb1c8b61ca652dcecc5437c03
 
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <form>
+      <div style={{ height: "80vh" }}>
+        <form className="access-form">
+          <h2 style={{ marginBottom: "2rem" }}>Welcome back, please Log in</h2>
           <InputField
             label="Username"
             type="text"
@@ -46,15 +56,14 @@ class Login extends Component {
             onChange={this.handleChange}
             required
           />
-          <Button onClick={this.handleFormSubmit}>
-            Login
-          </Button>
+          <Button onClick={this.handleFormSubmit}>LOGIN</Button>
+          <p>
+            You don't have an account?
+            <Link to={"/signup"}> SignUp</Link>
+          </p>
         </form>
-        <p>You don't have an account? 
-          <Link to={"/signup"}> SignUp</Link>
-        </p>
       </div>
-    )
+    );
   }
 }
 

@@ -42,7 +42,7 @@ class Navbar extends Component {
           }}
         >
           <Link to="/">
-            <img src="tequila-logo.svg" alt="tequila-sunrise-logo" />
+            <img src="flykiwi.png" alt="flykiwi-logo" />
           </Link>
           <div>
             <Link to="/login" className="nav-link">

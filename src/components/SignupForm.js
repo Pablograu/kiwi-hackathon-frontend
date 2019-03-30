@@ -1,51 +1,56 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Button, InputField } from "@kiwicom/orbit-components/lib";
 
 class SignupForn extends Component {
   render() {
-    const { username, email, password, handleChange, handleNextStep} = this.props;
+    const {
+      username,
+      email,
+      password,
+      handleChange,
+      handleNextStep
+    } = this.props;
     return (
-      <div>
-        <form>
+      <div style={{ height: "80vh" }}>
+        <form className="access-form">
+          <h2 style={{ marginBottom: "2rem" }}>Please sign up</h2>
           <InputField
             label="Username"
             type="text"
             name="username"
             value={username}
-            placeholder="Placeholder"
+            placeholder="Enter your username"
             onChange={handleChange}
             required
           />
           <InputField
-            type="email"
             label="Email"
+            type="email"
             value={email}
             name="email"
-            placeholder="Email"
+            placeholder="Your email"
             onChange={handleChange}
             help={<div />}
             required
           />
           <InputField
-            type="password"
             label="Password"
+            type="password"
             name="password"
             value={password}
-            placeholder="Password"
+            placeholder="Shhh.. password"
             onChange={handleChange}
             required
           />
-          <Button onClick={handleNextStep}>
-            Next
-          </Button>
+          <Button onClick={handleNextStep}>NEXT</Button>
+          <p>
+            Already have account?
+            <Link to={"/login"}> Login</Link>
+          </p>
         </form>
-
-        <p>Already have account? 
-          <Link to={"/login"}> Login</Link>
-        </p>
       </div>
-    )
+    );
   }
 }
 
