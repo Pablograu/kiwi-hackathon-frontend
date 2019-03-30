@@ -22,6 +22,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 /* ---- NavBar ---- */
 
 .NavBar {
@@ -53,7 +59,7 @@ body {
   padding: 2rem;
   justify-content: baseline;
   align-items: center;
-  background-color: rgb(215, 228, 158);
+  background-color: rgb(230, 228, 228);
 }
 
 .hero-text {
@@ -78,7 +84,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+
 
 }
 
@@ -88,7 +94,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(215, 228, 158);
+  background-color: rgb(230, 228, 228);
 
 }
 
@@ -110,7 +116,6 @@ body {
 /* Get discount */
 .getDiscount {
   text-align: center;
-  background-color: #eac5c5;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
@@ -126,7 +131,7 @@ body {
 .getPrizeContainer {
   display: flex;
   padding: 2.5rem;
-  background-color: rgb(215, 228, 158)
+  background-color: rgb(230, 228, 228);
 }
 
 .getPrizePhoto {
@@ -141,6 +146,12 @@ body {
   padding-top: 5rem;
 }
 
+.getPrizeText button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  color: grey;
+}
 
 /* ---- Footer ---- */
 .foot {
@@ -149,7 +160,6 @@ body {
   bottom: 0;
   justify-content: space-around;
   position: sticky;
-  background-color: white;
 }
 
 .foot-compo {
@@ -182,7 +192,7 @@ body {
 .plan-cards {
   display: flex;
   flex-direction: row;
-  <<<<<<< HEAD justify-content: space-around;
+  justify-content: space-around;
 }
 
 .plan-card {

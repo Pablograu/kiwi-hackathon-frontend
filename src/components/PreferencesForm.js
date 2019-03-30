@@ -27,7 +27,7 @@ class PreferencesForm extends Component {
     //      )
     //   }
     // }
-    const { startingPoint, handleChangeCities, handleFormSubmit, queryListCitites, selectedContinent, handleChangeContinents, queryListContinents} = this.props;
+    const { startingPoint, handleChangeCities, handleFormSubmit, queryListCitites, queryListContinents,selectedContinent, handleChangeContinents} = this.props;
     return (
       <form onSubmit={handleFormSubmit}>
         <label>Origin:</label>
@@ -37,6 +37,7 @@ class PreferencesForm extends Component {
                 this.handleClickCity(city.name)
               }}>{city.name}</p>
             })}
+          <input type="submit" value="Signup" />
           <label>Select the continent you would like to travel to:</label>
             <input ref={(input) => { this.textInput = input; }} type="text" name="selectedContinent" value={selectedContinent} onChange={handleChangeContinents}/>
             {queryListContinents.map((continent, index) => {
@@ -44,7 +45,6 @@ class PreferencesForm extends Component {
                     this.handleClickContinent(continent.name)
                     }}>{continent.name}</p>
             })}
-            <input type="submit" value="Signup" />
       </form>
     )
   }
