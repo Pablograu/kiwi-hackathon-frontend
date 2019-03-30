@@ -29,7 +29,7 @@ export default class Payment extends Component {
             label="Expiration date"
           />
           <Link to="/Private" style={{ textDecoration: "none" }}>
-            <Button onClick={this.handleChange}>GIMME THE MONEY!</Button>
+            <Button type="submit">GIMME THE MONEY!</Button>
           </Link>
         </form>
       </div>
