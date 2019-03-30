@@ -126,4 +126,13 @@ body {
 .plan-cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+.plan-card {
+  cursor: pointer;
+}
+
+.plan-card:active {
+  border-color: red;
 }
