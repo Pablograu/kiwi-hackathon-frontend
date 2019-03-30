@@ -12,9 +12,11 @@ class Signup extends Component {
     email: "",
     password: "",
     step: 1,
-    subscriptionType: null,
+    subscriptionType: 'Standard',
     startingPoint: '',
-    queryList: [],
+    selectedContinent: '',
+    queryListCitites: [],
+    queryListContinents: [],
   };
 
   handleFormSubmit = (event) => {
@@ -29,21 +31,51 @@ class Signup extends Component {
     this.setState({[name]: value});
   }
 
-  handleChangeLocations = (event) => {
+  handleChangeCities = (event) => {
+    this.handleChange(event);
     const {value} = event.target;
-    tequilaLocationsService.checkFlights(value)
+    tequilaLocationsService.checkFlights(value, 'city')
     .then((data) => {
       this.setState({
-        queryList: data.locations
+        queryListCitites: data.locations
       })
     })
     .catch(error => console.log(error))
   }
 
-  handleNextStep = (event) => {
+  handleChangeContinents = (event) => {
+    this.handleChange(event);
+    const {value} = event.target;
+    tequilaLocationsService.checkFlights(value, 'continent')
+    .then((data) => {
+      console.log(data)
+      this.setState({
+        queryListContinents: data.locations
+      })
+    })
+    .catch(error => console.log(error))
+  }
+
+  handleNextStep = () => {
     const currentStep = this.state.step;
     this.setState({
       step: currentStep+1
+    })
+  }
+
+  handleClickCity = (locationName) => {
+    console.log(locationName)
+    this.setState({
+      queryListCitites: [],
+      startingPoint: locationName
+    })
+  }
+
+  handleClickContinent = (continentName) => {
+    console.log(continentName)
+    this.setState({
+      queryListContinents: [],
+      selectedContinent: continentName
     })
   }
 
@@ -56,7 +88,7 @@ class Signup extends Component {
   }
 
   render() {
-    const { username, email, password , step, subscriptionType, queryList} = this.state;
+    const { username, email, password , step, subscriptionType, queryListCitites, startingPoint, queryListContinents} = this.state;
     if (step === 1) {
       return(<SignupForm 
       username={username} 
@@ -72,8 +104,13 @@ class Signup extends Component {
       return(<PreferencesForm 
       subscriptionType={subscriptionType}
       handleFormSubmit={this.handleFormSubmit}
-      handleChangeLocations={this.handleChangeLocations}
-      queryList={queryList}
+      handleChangeCities={this.handleChangeCities}
+      handleChangeContinents={this.handleChangeContinents}
+      queryListCitites={queryListCitites}
+      queryListContinents={queryListContinents}
+      handleClickCity={this.handleClickCity}
+      handleClickContinent={this.handleClickContinent}
+      startingPoint={startingPoint}
       />)
     }
   }

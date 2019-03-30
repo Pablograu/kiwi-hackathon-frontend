@@ -10,8 +10,8 @@ class TequilaLocationsService {
     })
   }
 
-  checkFlights(term) {
-    return this.locations.get(`/query?term=${term}&location_types=city&limit=10`,)
+  checkFlights(term, type) {
+    return this.locations.get(`/query?term=${term}&location_types=${type}&limit=10`,)
       .then(({ data }) => data);
   }
 }
