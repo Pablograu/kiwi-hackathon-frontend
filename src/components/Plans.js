@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Plans() {
   return (
-    <div className="how">
+    <div className="plans">
       <h2 style={{ padding: "0 3rem" }}>Choose your plan!</h2>
       <div className="how-boxes">
         <div className="how-box">

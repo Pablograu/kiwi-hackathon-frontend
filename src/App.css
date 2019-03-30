@@ -45,6 +45,8 @@ p,h3 {
 
 .nav-link {
   margin: 0 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 /* ---- Hero ---- */
@@ -55,11 +57,12 @@ p,h3 {
   padding: 2rem;
   justify-content: baseline;
   align-items: center;
+  background-color: rgb(215, 228, 158);
 }
 
 .hero-text {
   height: 70vh;
-  padding: 0 7rem;
+  padding: 0.7rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -73,12 +76,23 @@ p,h3 {
 
 /* ---- How does it work ---- */
 
-.how {
-  height: 100vh;
+.how{
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: pink;
+
+}
+
+.plans{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(215, 228, 158);
 
 }
 
@@ -96,23 +110,67 @@ p,h3 {
   height: 8rem;
   margin: 1rem 2rem;
 }
+/* Get discount */
+.getDiscount {
+  text-align: center;
+  background-color: #eac5c5;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.getDiscount p{
+  margin: 0;
+}
+
+@media (max-width: 375px) {
+  
+}
+
+/* Get prize */
+
+.getPrizeContainer{
+  display: flex;
+  padding: 2.5rem;
+  background-color: rgb(215, 228, 158)
+}
+.getPrizePhoto{
+  /* width: 50% */
+}
+.getPrizePhoto img{
+  width: 100%;
+}
+
+.getPrizeText{
+  padding-top: 5rem;
+}
+.getPrizeText button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  background-color: pink;
+  color: grey;
+}
 
 /* ---- Footer ---- */
 .foot {
   display: flex;
   flex-direction: column;
+  bottom: 0;
+  justify-content: space-around;
+  position: sticky;
+  background-color: white;
 }
 
 .foot-compo {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   height: 1.2rem;
+  text-align: right;
+  padding: 1rem
 }
 
-.foot-compo a {
+.foot-compo a{
   text-decoration: none;
+  padding: 0.1rem
 }
 
 .foot-sn {
@@ -131,6 +189,7 @@ p,h3 {
 .plan-cards {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .countdown-section{
@@ -225,3 +284,4 @@ p.code{
 .winner-section p:nth-child(2){
   margin-bottom: 20px;
 }
+
