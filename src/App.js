@@ -5,6 +5,7 @@ import AnonRoute from "./components/AnonRoute";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
+import Plans from "./components/Plans";
 import Private from "./pages/Private";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -19,6 +20,7 @@ class App extends Component {
           <Navbar />
           <Hero />
           <HowItWorks />
+          <Plans />
           <Switch>
             <AnonRoute path="/signup" component={Signup} />
             <AnonRoute path="/login" component={Login} />
