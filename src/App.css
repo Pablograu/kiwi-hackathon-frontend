@@ -175,3 +175,12 @@ body {
   height: 1.5rem;
   margin: 1rem;
 }
+<<<<<<< HEAD
+=======
+
+/* ---- Plan ---- */
+.plan-cards {
+  display: flex;
+  flex-direction: row;
+}
+>>>>>>> 1ca85f8b9a96553d5258e83e9a7471b1c3b9907c

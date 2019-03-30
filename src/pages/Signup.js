@@ -10,7 +10,7 @@ class Signup extends Component {
     username: "",
     email: "",
     password: "",
-    step: 1,
+    step: 2,
     subscriptionType: "Standard",
     startingPoint: "",
     selectedContinent: "",
