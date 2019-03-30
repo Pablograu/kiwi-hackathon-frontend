@@ -3,9 +3,8 @@ import { Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import AnonRoute from "./components/AnonRoute";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import HowItWorks from "./components/HowItWorks";
 import Private from "./pages/Private";
+import Main from "./pages/Main";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import AuthProvider from "./providers/AuthProvider";
@@ -17,9 +16,8 @@ class App extends Component {
       <AuthProvider>
         <div>
           <Navbar />
-          <Hero />
-          <HowItWorks />
           <Switch>
+            <AnonRoute path="/" component={Main} />
             <AnonRoute path="/signup" component={Signup} />
             <AnonRoute path="/login" component={Login} />
             <PrivateRoute path="/private" component={Private} />
