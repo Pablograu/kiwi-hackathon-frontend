@@ -303,7 +303,7 @@ p.code {
 }
 
 .upgrade-section {
-  height: 25vh;
+  height: 20vh;
 }
 
 .winner-section {
@@ -347,4 +347,22 @@ p.code {
 
 .access-form button {
   margin: 2rem 0;
+}
+
+.dateForm {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.dateForm Button {
+  margin-top: 50px;
+}
+
+.options-container {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
 }

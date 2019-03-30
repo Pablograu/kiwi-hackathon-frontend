@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import tequilaSearchService from '../lib/tequila-search-service'
 import tequilaLocationService from '../lib/tequila-locations-service'
 import { withAuth } from '../providers/AuthProvider';
-import { TripSegment, Card, Loading,Unknown, CardHeader,CardSection, List, ListItem, CarrierLogo, InformationCircle} from "@kiwicom/orbit-components/lib";
+import { TripSegment, Loading} from "@kiwicom/orbit-components/lib";
 
 class Options extends Component {
 
@@ -41,16 +41,13 @@ class Options extends Component {
     console.log(this.state.randomFlights)
     if (!this.state.loading) {
       return (
-        <div>
+        <div className="options-container">
           {this.state.randomFlights.map((flight, index) => {
             return(<TripSegment
               key={`id:${index}`}
-              duration={flight.duration.total}
               carrier={flight.countryFrom}
               departure={flight.cityFrom}
-              departureTime={flight.local_departure}
               arrival={flight.cityTo}
-              arrivalTime={flight.local_arrival}
               onClick={() => {
                 this.handleOnClick(flight.deep_link);
               }}
@@ -60,15 +57,16 @@ class Options extends Component {
         </div>
       )
     } else {
-      return (<Card>
-        <Loading type="boxLoader" loading>
-        <Unknown>
-        <CardHeader title="Test" />
-        <CardSection>
-        </CardSection>
-        </Unknown>
-        </Loading>
-      </Card>)}
+      return (
+        <div className="options-container">
+          <Loading
+            loading
+            type="pageLoader"
+            text="Please wait, content of the page is loading..."
+            dataTest="test"
+          />
+        </div>
+      )}
   }
 }
 

@@ -5,7 +5,7 @@ import { withAuth } from '../providers/AuthProvider';
 class DatesForm extends Component {
   render() {
     return (
-      <div>
+      <div className="dateForm">
         <form>
           <InputField 
             disabled
