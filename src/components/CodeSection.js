@@ -6,7 +6,7 @@ class CodeSection extends Component {
     return (
       <div className="code-section">
         <div>
-          <p>Your Plan allows XX% disscount</p>
+          <p>Your Plan allows 10% disscount</p>
           <p>Introduice your code in your next kiwi.com booking</p>
           <p>Remember! the more bookings in kiwi the more chances to get selected</p>
         </div>

@@ -19,11 +19,10 @@ class Login extends Component {
       .catch(error => console.log(error));
   };
 
-  handleChange = event => {
-    console.log(event.target.name);
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
+  handleChange = (event) => {  
+    const {name, value} = event.target;
+    this.setState({[name]: value});
+  }
 
   render() {
     const { username, password } = this.state;

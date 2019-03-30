@@ -25,12 +25,16 @@ class Navbar extends Component {
 
   render() {
     const { isLogged, user, logout } = this.props;
-    const { username } = user;
     if (isLogged) {
       return (
-        <div>
-          <p>username: {username}</p>
-          <p onClick={logout}>Logout</p>
+        <div  className="NavBar"
+        style={{
+          boxShadow: this.state.withShadow && "0px 0px 8px 2px #000000"
+        }}>
+        <Link to="/">
+            <img src="/flykiwi.png" alt="flykiwi-logo" />
+          </Link>
+          <p className="nav-link" onClick={logout}>Logout</p>
         </div>
       );
     } else {

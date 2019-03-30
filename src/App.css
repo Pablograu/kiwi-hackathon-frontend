@@ -317,7 +317,7 @@ p.code {
 }
 
 .upgrade-section {
-  height: 25vh;
+  height: 20vh;
 }
 
 .winner-section {
@@ -363,4 +363,22 @@ p.code {
   margin: 2rem 0;
   background-color: #079882;
   color: white;
+}
+
+.dateForm {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.dateForm Button {
+  margin-top: 50px;
+}
+
+.options-container {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
 }
