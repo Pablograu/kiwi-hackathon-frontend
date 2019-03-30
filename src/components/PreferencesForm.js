@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, InputField } from "@kiwicom/orbit-components/lib";
-import { Link } from "react-router-dom";
 
 class PreferencesForm extends Component {
   handleClickCity = city => {
@@ -12,25 +11,10 @@ class PreferencesForm extends Component {
   };
 
   render() {
-    // const ContinentInput = () => {
-    //   const {subscriptionType, selectedContinent , handleChangeContinents, queryListContinents} = this.props;
-    //   if (subscriptionType === 'Standard') {
-    //     return(
-    //       <React.Fragment>
-    //         <label>Select the continent you would like to travel to:</label>
-    //         <input ref={(input) => { this.textInput = input; }} type="text" name="selectedContinent" value={selectedContinent} onChange={handleChangeContinents}/>
-    //         {queryListContinents.map((continent, index) => {
-    //         return <p value={continent.name} key={`id=${index}`} onClick={() => {
-    //                 this.handleClickContinent(continent.name)
-    //                 }}>{continent.name}</p>
-    //         })}
-    //       </React.Fragment>
-    //      )
-    //   }
-    // }
     const {
       startingPoint,
       handleChangeCities,
+      handleNextStep,
       queryListCitites,
       queryListContinents,
       selectedContinent,
@@ -82,9 +66,9 @@ class PreferencesForm extends Component {
               </p>
             );
           })}
-          <Link to="/Payment" style={{ textDecoration: "none" }}>
-            <Button type="submit">CONFIRM SELECTION</Button>
-          </Link>
+          <Button type="submit" onClick={handleNextStep}>
+            CONFIRM SELECTION
+          </Button>
         </form>
       </div>
     );

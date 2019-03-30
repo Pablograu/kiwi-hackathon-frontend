@@ -3,6 +3,7 @@ import { withAuth } from "../providers/AuthProvider";
 import SignupForm from "../components/SignupForm";
 import PlanForm from "../components/PlanForm";
 import PreferencesForm from "../components/PreferencesForm";
+import Payment from "../components/Payment";
 import tequilaLocationsService from "../lib/tequila-locations-service";
 
 class Signup extends Component {
@@ -64,6 +65,7 @@ class Signup extends Component {
   };
 
   handleNextStep = () => {
+    console.log("handle next step from continents");
     const currentStep = this.state.step;
     this.setState({
       step: currentStep + 1
@@ -125,7 +127,6 @@ class Signup extends Component {
       return (
         <PreferencesForm
           subscriptionType={subscriptionType}
-          handleFormSubmit={this.handleFormSubmit}
           handleChangeCities={this.handleChangeCities}
           handleChangeContinents={this.handleChangeContinents}
           queryListCitites={queryListCitites}
@@ -134,8 +135,11 @@ class Signup extends Component {
           handleClickContinent={this.handleClickContinent}
           startingPoint={startingPoint}
           selectedContinent={selectedContinent}
+          handleNextStep={this.handleNextStep}
         />
       );
+    } else if (step === 4) {
+      return <Payment handleFormSubmit={this.handleFormSubmit} />;
     }
   }
 }
