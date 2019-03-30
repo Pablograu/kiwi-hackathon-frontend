@@ -5,14 +5,14 @@ class TequilaSearchService {
     this.search = axios.create({
       baseURL: process.env.TEQUILA_API_SEARCH_URL,
       headers: {
-        apikey: process.env.TEQUIL_API_KEY,
+        apikey: '2RnUGMIDtFIG0Sh4Phufa5D7GROgaou6',
       }
     })
   }
 
   checkFlights(query) {
     const {flyFrom, flyTo, dateFrom, dateTo, returnFrom, returnTo, nightsFrom, nightsTo, maxDuration, flightType, adults, stopopvers, limit} = query;
-    return this.booking.get(`/search?
+    return this.search.get(`/search?
     fly_from=${flyFrom}&
     fly_to=${flyTo}&
     date_from=${dateFrom}&
