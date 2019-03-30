@@ -6,6 +6,7 @@ class UpgradeSection extends Component {
     return (
       <div className="upgrade-section">
         <h3>Upgrade your plan!</h3>
+        <div className="card-container">
         <Card closable={false} dataTest="test" spaceAfter="normal">
               <CardHeader
                 // icon={<Airplane />}
@@ -30,6 +31,8 @@ class UpgradeSection extends Component {
                 </Heading>
               </CardSection>
             </Card>
+        </div>
+        
       </div>
     )
   }

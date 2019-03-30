@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, InputField } from "@kiwicom/orbit-components/lib";
-import { Link } from "react-router-dom";
 
 class PreferencesForm extends Component {
   handleClickCity = city => {

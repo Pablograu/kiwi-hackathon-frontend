@@ -24,7 +24,7 @@ class Navbar extends Component {
   }
 
   render() {
-    const { isLogged, user, logout } = this.props;
+    const { isLogged, logout } = this.props;
     if (isLogged) {
       return (
         <div  className="NavBar"
@@ -32,9 +32,9 @@ class Navbar extends Component {
           boxShadow: this.state.withShadow && "0px 0px 8px 2px #000000"
         }}>
         <Link to="/">
-            <img src="/flykiwi.png" alt="flykiwi-logo" />
+            <img src={process.env.PUBLIC_URL + '/flykiwi.png'} alt="flykiwi-logo" />
           </Link>
-          <p className="nav-link" onClick={logout}>Logout</p>
+          <p className="nav-link logout" onClick={logout}>Logout</p>
         </div>
       );
     } else {
