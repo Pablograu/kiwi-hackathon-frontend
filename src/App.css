@@ -94,6 +94,7 @@ h3 {
 
 .plans {
   height: 80vh;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,7 +229,20 @@ h3 {
 .plan-cards {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding: 8rem 0;
+  height: 80vh;
+}
+
+.plan-card {
   cursor: pointer;
+}
+
+.plan-card:hover {
+  -webkit-box-shadow: -2px 10px 26px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 10px 26px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 10px 26px -11px rgba(0, 0, 0, 0.75);
 }
 
 .countdown-section {
@@ -348,6 +362,8 @@ p.code {
 
 .access-form button {
   margin: 2rem 0;
+  background-color: #079882;
+  color: white;
 }
 
 .dateForm {

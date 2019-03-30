@@ -7,12 +7,13 @@ class PlanForm extends Component {
   render() {
     const { handleChangePlan, handleNextStep } = this.props;
     return (
-      <form onSubmit={handleNextStep}>
+      <form>
         <div className="plan-cards">
           <div
             className="plan-card"
             onClick={() => {
               handleChangePlan("basic");
+              handleNextStep();
             }}
           >
             <Card closable={false} dataTest="test" spaceAfter="normal">
@@ -45,6 +46,7 @@ class PlanForm extends Component {
             className="plan-card"
             onClick={() => {
               handleChangePlan("standard");
+              handleNextStep();
             }}
           >
             <Card closable={false} dataTest="test" spaceAfter="normal">
@@ -77,6 +79,7 @@ class PlanForm extends Component {
             className="plan-card"
             onClick={() => {
               handleChangePlan("premium");
+              handleNextStep();
             }}
           >
             <Card closable={false} dataTest="test" spaceAfter="normal">
@@ -105,7 +108,6 @@ class PlanForm extends Component {
             </Card>
           </div>
         </div>
-        <input type="submit" value="Next Step" />
       </form>
     );
   }
