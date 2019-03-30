@@ -118,6 +118,7 @@ h3 {
   margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
+  width: 33%;
 }
 
 .how-box img {
@@ -139,6 +140,7 @@ h3 {
   margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
+  width: 33%;
 }
 
 .plan-box img {
