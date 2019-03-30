@@ -31,7 +31,6 @@ class PreferencesForm extends Component {
     const {
       startingPoint,
       handleChangeCities,
-      handleFormSubmit,
       queryListCitites,
       queryListContinents,
       selectedContinent,

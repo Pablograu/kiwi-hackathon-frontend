@@ -19,7 +19,6 @@ class Signup extends Component {
   };
 
   handleFormSubmit = event => {
-    console.log('heyy')
     event.preventDefault();
     const {
       username,
@@ -57,7 +56,6 @@ class Signup extends Component {
     tequilaLocationsService
       .checkFlights(value, "continent")
       .then(data => {
-        console.log(data);
         this.setState({
           queryListContinents: data.locations
         });
@@ -73,7 +71,6 @@ class Signup extends Component {
   };
 
   handleClickCity = locationName => {
-    console.log(locationName);
     this.setState({
       queryListCitites: [],
       startingPoint: locationName
@@ -81,7 +78,6 @@ class Signup extends Component {
   };
 
   handleClickContinent = continentName => {
-    console.log(continentName);
     this.setState({
       queryListContinents: [],
       selectedContinent: continentName
@@ -90,7 +86,6 @@ class Signup extends Component {
 
   handleChangePlan = plan => {
     const currentStep = this.state.step;
-    console.log(plan);
     this.setState({
       step: currentStep + 1,
       plan: plan

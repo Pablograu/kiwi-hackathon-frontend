@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Options from '../components/Options'
 import DatesForm from '../components/DatesForm'
-import { Redirect } from 'react-router-dom';
 import { Link } from '@kiwicom/orbit-components/lib/icons';
 
 class Booking extends Component {
@@ -15,10 +14,6 @@ class Booking extends Component {
 
   handleOnClick = (deeplink) => {
     window.location = deeplink;
-    // this.setState({
-    //   redirect: true,
-    //   deeplink
-    // })
   }
 
   handleOnChange = (event) => {

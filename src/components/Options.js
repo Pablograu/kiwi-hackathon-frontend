@@ -19,7 +19,6 @@ class Options extends Component {
       const dateTo = this.props.return;
       tequilaSearchService.checkFlights(flyFrom,dateFrom,dateTo)
       .then((response) => {
-        console.log(response.data)
         const randomFlights = [];
         for (let i = 0; i < 5; i++) {
           randomFlights.push(response.data[Math.floor(Math.random()*response.data.length)])
@@ -38,7 +37,6 @@ class Options extends Component {
   }
 
   render() {
-    console.log(this.state.randomFlights)
     if (!this.state.loading) {
       return (
         <div className="options-container">

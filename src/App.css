@@ -58,6 +58,10 @@ h3 {
   padding: 12px;
 }
 
+.logout {
+  cursor: pointer;
+}
+
 /* ---- Hero ---- */
 
 .hero {
@@ -269,7 +273,7 @@ h3 {
 }
 
 .countdown-section {
-  height: 25vh;
+  height: 20vh;
 }
 
 .countdown-section .title {
@@ -328,6 +332,7 @@ h3 {
 .code-part p:nth-child(2) {
   text-align: end;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 p.code {
@@ -340,12 +345,18 @@ p.code {
 }
 
 .upgrade-section {
-  height: 30vh;
+  margin-top: 5px;
+  height: 35vh;
   display: flex;
+  justify-content: space-around;
+}
+
+.upgrade-section h3{
+  align-self: center;
 }
 
 .winner-section {
-  height: 30vh;
+  height: 20vh;
   display: flex;
   text-align: center;
 }
@@ -357,7 +368,7 @@ p.code {
 .winner-section p {
   text-transform: uppercase;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .winner-section p:nth-child(2) {
@@ -401,7 +412,7 @@ p.code {
 }
 
 .dateForm {
-  height: 75vh;
+  height: 70vh;
   width: 60%;
   margin: auto;
   margin-top: 100px;
@@ -422,4 +433,9 @@ p.code {
   width: 40vw;
   margin: 0 auto;
   margin-top: 50px;
+}
+
+.card-container {
+  width: 50%;
+  max-height: 200px;
 }
