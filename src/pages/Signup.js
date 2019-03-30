@@ -96,7 +96,7 @@ class Signup extends Component {
   };
 
   render() {
-    const {
+    const { 
       username,
       email,
       password,
@@ -104,8 +104,8 @@ class Signup extends Component {
       subscriptionType,
       queryListCitites,
       startingPoint,
-      queryListContinents
-    } = this.state;
+      queryListContinents,
+      selectedContinent} = this.state;
     if (step === 1) {
       return (
         <SignupForm
@@ -117,26 +117,22 @@ class Signup extends Component {
         />
       );
     } else if (step === 2) {
-      return (
-        <PlanForm
-          handleChange={this.handleChangePlan}
-          handleNextStep={this.handleNextStep}
-        />
-      );
+      return(<PlanForm 
+      handleChangePlan={this.handleChangePlan}
+      handleNextStep={this.handleNextStep}/>)
     } else if (step === 3) {
-      return (
-        <PreferencesForm
-          subscriptionType={subscriptionType}
-          handleFormSubmit={this.handleFormSubmit}
-          handleChangeCities={this.handleChangeCities}
-          handleChangeContinents={this.handleChangeContinents}
-          queryListCitites={queryListCitites}
-          queryListContinents={queryListContinents}
-          handleClickCity={this.handleClickCity}
-          handleClickContinent={this.handleClickContinent}
-          startingPoint={startingPoint}
-        />
-      );
+      return(<PreferencesForm 
+      subscriptionType={subscriptionType}
+      handleFormSubmit={this.handleFormSubmit}
+      handleChangeCities={this.handleChangeCities}
+      handleChangeContinents={this.handleChangeContinents}
+      queryListCitites={queryListCitites}
+      queryListContinents={queryListContinents}
+      handleClickCity={this.handleClickCity}
+      handleClickContinent={this.handleClickContinent}
+      startingPoint={startingPoint}
+      selectedContinent={selectedContinent}
+      />)
     }
   }
 }
