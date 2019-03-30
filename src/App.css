@@ -40,6 +40,8 @@ body {
 
 .nav-link {
   margin: 0 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 /* ---- Hero ---- */
@@ -50,11 +52,12 @@ body {
   padding: 2rem;
   justify-content: baseline;
   align-items: center;
+  background-color: rgb(215, 228, 158);
 }
 
 .hero-text {
   height: 70vh;
-  padding: 0 7rem;
+  padding: 0.7rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -68,12 +71,23 @@ body {
 
 /* ---- How does it work ---- */
 
-.how {
-  height: 100vh;
+.how{
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: pink;
+
+}
+
+.plans{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(215, 228, 158);
 
 }
 
@@ -117,7 +131,7 @@ body {
   /* width: 50% */
 }
 .getPrizePhoto img{
-  width: 90%;
+  width: 100%;
 }
 
 .getPrizeText{
