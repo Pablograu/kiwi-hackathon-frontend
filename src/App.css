@@ -65,3 +65,29 @@ body {
 .hero img {
   height: 70vh;
 }
+
+/* ---- How does it work ---- */
+
+.how {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.how-boxes {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+}
+
+.how-box {
+  margin: 1rem 2rem;
+}
+
+.how-box img {
+  height: 8rem;
+  margin: 1rem 2rem;
+}
