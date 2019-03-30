@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, InputField } from "@kiwicom/orbit-components/lib";
+import { Link } from "react-router-dom";
 
 class PreferencesForm extends Component {
   handleClickCity = city => {
@@ -82,7 +83,9 @@ class PreferencesForm extends Component {
               </p>
             );
           })}
-          <Button type="submit">CONFIRM SELECTION</Button>
+          <Link to="/Payment" style={{ textDecoration: "none" }}>
+            <Button type="submit">CONFIRM SELECTION</Button>
+          </Link>
         </form>
       </div>
     );

@@ -10,6 +10,7 @@ import Main from "./pages/Main";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Booking from "./pages/Booking";
+import Payment from "./pages/Payment";
 import AuthProvider from "./providers/AuthProvider";
 import "./App.css";
 
@@ -18,11 +19,12 @@ class App extends Component {
     return (
       <AuthProvider>
         <div>
-          <Navbar/>
+          <Navbar />
           <Switch>
             <AnonRoute exact path="/" component={Main} />
             <AnonRoute path="/signup" component={Signup} />
             <AnonRoute path="/login" component={Login} />
+            <AnonRoute path="/payment" component={Payment} />
             <PrivateRoute exact path="/private" component={Private} />
             <PrivateRoute path="/private/winner" component={Winner} />
             <PrivateRoute path="/booking" component={Booking} />
