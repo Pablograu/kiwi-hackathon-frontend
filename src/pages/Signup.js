@@ -48,7 +48,6 @@ class Signup extends Component {
     const {value} = event.target;
     tequilaLocationsService.checkFlights(value, 'continent')
     .then((data) => {
-      console.log(data)
       this.setState({
         queryListContinents: data.locations
       })
@@ -79,7 +78,7 @@ class Signup extends Component {
     })
   }
 
-  handleCahngePlan = (plan) => {
+  handleChangePlan = (plan) => {
     const currentStep = this.state.step;
     this.setState({
       step: currentStep + 1,
@@ -88,7 +87,7 @@ class Signup extends Component {
   }
 
   render() {
-    const { username, email, password , step, subscriptionType, queryListCitites, startingPoint, queryListContinents} = this.state;
+    const { username, email, password , step, subscriptionType, queryListCitites, startingPoint, queryListContinents, selectedContinent} = this.state;
     if (step === 1) {
       return(<SignupForm 
       username={username} 
@@ -98,7 +97,7 @@ class Signup extends Component {
       handleNextStep={this.handleNextStep}/>)
     } else if (step === 2) {
       return(<PlanForm 
-      handleCahngePlan={this.handleCahngePlan}
+      handleChangePlan={this.handleChangePlan}
       handleNextStep={this.handleNextStep}/>)
     } else if (step === 3) {
       return(<PreferencesForm 
@@ -111,6 +110,7 @@ class Signup extends Component {
       handleClickCity={this.handleClickCity}
       handleClickContinent={this.handleClickContinent}
       startingPoint={startingPoint}
+      selectedContinent={selectedContinent}
       />)
     }
   }
