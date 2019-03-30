@@ -6,6 +6,7 @@ export default class Payment extends Component {
   state = {};
 
   handleChange = event => {
+    event.preventDefault();
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
@@ -29,7 +30,9 @@ export default class Payment extends Component {
             label="Expiration date"
           />
           <Link to="/Private" style={{ textDecoration: "none" }}>
-            <Button type="submit">GIMME THE MONEY!</Button>
+            <Button onClick={this.props.handleFormSubmit}>
+              GIMME THE MONEY!
+            </Button>
           </Link>
         </form>
       </div>
