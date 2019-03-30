@@ -14,10 +14,34 @@ export default function Footer() {
         </div>
       </div>
       <div className="foot-sn">
-        <img src="facebook.svg" alt="facebook" />
-        <img src="insta.svg" alt="instagram" />
-        <img src="linkedin.svg" alt="linkedin" />
-        <img src="mail.svg" alt="mail" />
+        <a
+          href="https://www.facebook.com/kiwicom247/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="facebook.svg" alt="facebook" />
+        </a>
+        <a
+          href="https://www.instagram.com/kiwicom247/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="insta.svg" alt="instagram" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/kiwi.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.svg" alt="linkedin" />
+        </a>
+        <a
+          href="https://www.facebook.com/kiwicom247/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="mail.svg" alt="mail" />
+        </a>
       </div>
     </div>
   );

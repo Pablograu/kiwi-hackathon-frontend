@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@kiwicom/orbit-components/lib";
+import { Link } from "react-router-dom";
 
 export default function Plans() {
   return (
@@ -29,7 +30,9 @@ export default function Plans() {
         </div>
       </div>
       <div style={{ marginTop: "1.2rem" }}>
-        <Button>GET STARTED</Button>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <Button>GET STARTED</Button>
+        </Link>
       </div>
     </div>
   );

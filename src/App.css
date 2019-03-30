@@ -176,12 +176,6 @@ h3 {
   padding: 0 4rem;
 }
 
-.getPrizeText button {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border-style: none;
-  color: grey;
-}
 
 /* ---- Footer ---- */
 .foot {
@@ -334,4 +328,23 @@ p.code {
 
 .plan-card {
   cursor: pointer;
+}
+
+/* ---- Signup ---- */
+
+.access-form {
+  width: 40vw;
+  height: 50vh;
+  margin: 0 auto;
+  padding-top: 10rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.access-form button {
+  margin: 2rem 0;
 }

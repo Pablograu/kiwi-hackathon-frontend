@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@kiwicom/orbit-components/lib";
+import { Link } from "react-router-dom";
 
 export default function GetPrize() {
   return (
@@ -11,7 +12,9 @@ export default function GetPrize() {
           opportunity of winning a trip to any destination in the world, with
           tickets valued up until 1000€
         </p>
-        <Button>GET STARTED</Button>
+        <Link to="/signup" style={{ textDecoration: "none" }}>
+          <Button>GET STARTED</Button>
+        </Link>
       </div>
       <div className="getPrizePhoto">
         <img
