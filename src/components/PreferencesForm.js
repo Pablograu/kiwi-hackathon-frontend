@@ -38,7 +38,7 @@ class PreferencesForm extends Component {
     } = this.props;
     return (
       <div style={{ height: "80vh" }}>
-        <form onSubmit={handleFormSubmit} className="access-form">
+        <form className="access-form">
           <InputField
             label="Origin:"
             type="text"
@@ -82,7 +82,7 @@ class PreferencesForm extends Component {
               </p>
             );
           })}
-          <Button type="submit">CONFIRM SELECTION</Button>
+          <Button onClick={handleFormSubmit} type="submit">CONFIRM SELECTION</Button>
         </form>
       </div>
     );
