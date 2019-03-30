@@ -95,3 +95,7 @@ body {
 .getDiscount {
   text-align: center;
 }
+
+@media (max-width: 375px) {
+  
+}
