@@ -5,6 +5,7 @@ import AnonRoute from "./components/AnonRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Private from "./pages/Private";
+import Winner from "./pages/Winner";
 import Main from "./pages/Main";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -21,7 +22,8 @@ class App extends Component {
             <AnonRoute exact path="/" component={Main} />
             <AnonRoute path="/signup" component={Signup} />
             <AnonRoute path="/login" component={Login} />
-            <PrivateRoute path="/private" component={Private} />
+            <PrivateRoute exact path="/private" component={Private} />
+            <PrivateRoute path="/private/winner" component={Winner} />
           </Switch>
           <Footer />
         </div>

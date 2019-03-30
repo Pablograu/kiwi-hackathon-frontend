@@ -10,7 +10,7 @@ class Signup extends Component {
     username: "",
     email: "",
     password: "",
-    step: 2,
+    step: 1,
     subscriptionType: "Standard",
     startingPoint: "",
     selectedContinent: "",
@@ -89,6 +89,7 @@ class Signup extends Component {
 
   handleChangePlan = plan => {
     const currentStep = this.state.step;
+    console.log(plan);
     this.setState({
       step: currentStep + 1,
       plan: plan
@@ -96,7 +97,7 @@ class Signup extends Component {
   };
 
   render() {
-    const { 
+    const {
       username,
       email,
       password,
@@ -105,7 +106,8 @@ class Signup extends Component {
       queryListCitites,
       startingPoint,
       queryListContinents,
-      selectedContinent} = this.state;
+      selectedContinent
+    } = this.state;
     if (step === 1) {
       return (
         <SignupForm
@@ -117,22 +119,27 @@ class Signup extends Component {
         />
       );
     } else if (step === 2) {
-      return(<PlanForm 
-      handleChangePlan={this.handleChangePlan}
-      handleNextStep={this.handleNextStep}/>)
+      return (
+        <PlanForm
+          handleChangePlan={this.handleChangePlan}
+          handleNextStep={this.handleNextStep}
+        />
+      );
     } else if (step === 3) {
-      return(<PreferencesForm 
-      subscriptionType={subscriptionType}
-      handleFormSubmit={this.handleFormSubmit}
-      handleChangeCities={this.handleChangeCities}
-      handleChangeContinents={this.handleChangeContinents}
-      queryListCitites={queryListCitites}
-      queryListContinents={queryListContinents}
-      handleClickCity={this.handleClickCity}
-      handleClickContinent={this.handleClickContinent}
-      startingPoint={startingPoint}
-      selectedContinent={selectedContinent}
-      />)
+      return (
+        <PreferencesForm
+          subscriptionType={subscriptionType}
+          handleFormSubmit={this.handleFormSubmit}
+          handleChangeCities={this.handleChangeCities}
+          handleChangeContinents={this.handleChangeContinents}
+          queryListCitites={queryListCitites}
+          queryListContinents={queryListContinents}
+          handleClickCity={this.handleClickCity}
+          handleClickContinent={this.handleClickContinent}
+          startingPoint={startingPoint}
+          selectedContinent={selectedContinent}
+        />
+      );
     }
   }
 }
