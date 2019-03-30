@@ -232,14 +232,14 @@ h3 {
 }
 
 .countdown-section {
-  height: 30vh;
+  height: 25vh;
 }
 
 .countdown-section .title {
   font-size: 24px;
   text-align: center;
   font-weight: bold;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .count-down-container {
@@ -263,7 +263,7 @@ h3 {
 }
 
 .code-section {
-  height: 30vh;
+  height: 25vh;
   display: flex;
   background-color: rgb(230, 228, 228);
   font-size: 10px;
@@ -303,7 +303,8 @@ p.code {
 }
 
 .upgrade-section {
-  height: 20vh;
+  height: 30vh;
+  display: flex;
 }
 
 .winner-section {
