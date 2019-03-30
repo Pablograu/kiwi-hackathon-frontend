@@ -29,13 +29,13 @@ class PlanForm extends Component {
                 <Heading type="title3" element="h3">
                   Travel Raffle Opportunity
                 </Heading>
-                <Text>Win a 500EUR Trip</Text>
+                <Text>Win a 500€ Trip</Text>
                 <Text>Travel by yourself</Text>
                 <Text>We choose your destination</Text>
               </CardSection>
               <CardSection>
                 <Heading type="title3" element="h3">
-                  5EUR/month
+                  5€/month
                 </Heading>
               </CardSection>
             </Card>
@@ -61,13 +61,13 @@ class PlanForm extends Component {
                 <Heading type="title3" element="h3">
                   Travel Raffle Opportunity
                 </Heading>
-                <Text>Win a 700EUR Trip</Text>
+                <Text>Win a 700€ Trip</Text>
                 <Text>Travel with someone</Text>
                 <Text>Choose a continent</Text>
               </CardSection>
               <CardSection>
                 <Heading type="title3" element="h3">
-                  10EUR/month
+                  10€/month
                 </Heading>
               </CardSection>
             </Card>
@@ -93,13 +93,13 @@ class PlanForm extends Component {
                 <Heading type="title3" element="h3">
                   Travel Raffle Opportunity
                 </Heading>
-                <Text>Win a 1000EUR Trip</Text>
+                <Text>Win a 1000€ Trip</Text>
                 <Text>Travel with someone</Text>
                 <Text>Choose 5 destinations</Text>
               </CardSection>
               <CardSection>
                 <Heading type="title3" element="h3">
-                  15EUR/month
+                  15€/month
                 </Heading>
               </CardSection>
             </Card>

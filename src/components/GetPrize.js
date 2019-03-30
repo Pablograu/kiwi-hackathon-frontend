@@ -9,7 +9,7 @@ export default function GetPrize() {
         <p>
           With Sunrise you get great discounts in kiwi.com and the AWESOME
           opportunity of winning a trip to any destination in the world, with
-          tickets valuated in 500€
+          tickets valued up until 1000€
         </p>
         <Button>GET STARTED</Button>
       </div>
