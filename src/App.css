@@ -121,3 +121,9 @@ body {
   height: 1.5rem;
   margin: 1rem;
 }
+
+/* ---- Plan ---- */
+.plan-cards {
+  display: flex;
+  flex-direction: row;
+}
