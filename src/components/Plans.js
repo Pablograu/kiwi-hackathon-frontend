@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@kiwicom/orbit-components/lib";
 
 export default function Plans() {
   return (
@@ -36,7 +37,7 @@ export default function Plans() {
           </p>
         </div>
       </div>
-      <button>GET STARTED</button>
+      <Button>Get Started</Button>
     </div>
   );
 }
