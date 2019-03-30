@@ -22,7 +22,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-p,h3 {
+p,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -31,6 +32,7 @@ p,h3 {
 
 .NavBar {
   position: sticky;
+  z-index: 1;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -57,7 +59,7 @@ p,h3 {
   padding: 2rem;
   justify-content: baseline;
   align-items: center;
-  background-color: rgb(215, 228, 158);
+  background-color: rgb(230, 228, 228);
 }
 
 .hero-text {
@@ -76,23 +78,23 @@ p,h3 {
 
 /* ---- How does it work ---- */
 
-.how{
+.how {
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+
 
 }
 
-.plans{
+.plans {
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(215, 228, 158);
+  background-color: rgb(230, 228, 228);
 
 }
 
@@ -110,43 +112,44 @@ p,h3 {
   height: 8rem;
   margin: 1rem 2rem;
 }
+
 /* Get discount */
 .getDiscount {
   text-align: center;
-  background-color: #eac5c5;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.getDiscount p{
+
+.getDiscount p {
   margin: 0;
 }
 
-@media (max-width: 375px) {
-  
-}
+@media (max-width: 375px) {}
 
 /* Get prize */
 
-.getPrizeContainer{
+.getPrizeContainer {
   display: flex;
   padding: 2.5rem;
-  background-color: rgb(215, 228, 158)
+  background-color: rgb(230, 228, 228);
 }
-.getPrizePhoto{
+
+.getPrizePhoto {
   /* width: 50% */
 }
-.getPrizePhoto img{
+
+.getPrizePhoto img {
   width: 100%;
 }
 
-.getPrizeText{
+.getPrizeText {
   padding-top: 5rem;
 }
-.getPrizeText button{
+
+.getPrizeText button {
   padding: 1rem;
   border-radius: 0.5rem;
   border-style: none;
-  background-color: pink;
   color: grey;
 }
 
@@ -157,18 +160,18 @@ p,h3 {
   bottom: 0;
   justify-content: space-around;
   position: sticky;
-  background-color: white;
 }
 
 .foot-compo {
   display: flex;
   flex-direction: row;
   height: 1.2rem;
-  text-align: right;
-  padding: 1rem
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.2rem 0 0.2rem 0;
 }
 
-.foot-compo a{
+.foot-compo a {
   text-decoration: none;
   padding: 0.1rem
 }
@@ -287,3 +290,6 @@ p.code{
   margin-bottom: 20px;
 }
 
+.plan-card {
+  cursor: pointer;
+}

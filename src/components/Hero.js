@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@kiwicom/orbit-components/lib";
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
           every month. Not convinced? what about a 5% discount in all of your
           trips.
         </p>
-        <button>GET STARTED</button>
+        <Button>GET STARTED</Button>
       </div>
       <img src="island-hero.jpeg" alt="img" />
     </div>
