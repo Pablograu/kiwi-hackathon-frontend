@@ -3,6 +3,7 @@ import { Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import AnonRoute from "./components/AnonRoute";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Private from "./pages/Private";
 import Main from "./pages/Main";
 import Signup from "./pages/Signup";
@@ -22,6 +23,7 @@ class App extends Component {
             <AnonRoute path="/login" component={Login} />
             <PrivateRoute path="/private" component={Private} />
           </Switch>
+          <Footer />
         </div>
       </AuthProvider>
     );
