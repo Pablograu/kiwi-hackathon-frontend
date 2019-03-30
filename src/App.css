@@ -23,6 +23,7 @@ body {
 
 }
 
+/* ---- NavBar ---- */
 
 .NavBar {
   position: sticky;
@@ -39,4 +40,28 @@ body {
 
 .nav-link {
   margin: 0 1rem;
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.hero-text {
+  height: 70vh;
+  padding: 0 7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 2rem;
+
+}
+
+.hero img {
+  height: 70vh;
 }
