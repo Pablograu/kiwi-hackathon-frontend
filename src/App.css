@@ -40,6 +40,8 @@ body {
 
 .nav-link {
   margin: 0 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 /* ---- Hero ---- */
@@ -50,11 +52,12 @@ body {
   padding: 2rem;
   justify-content: baseline;
   align-items: center;
+  background-color: rgb(215, 228, 158);
 }
 
 .hero-text {
   height: 70vh;
-  padding: 0 7rem;
+  padding: 0.7rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -68,12 +71,23 @@ body {
 
 /* ---- How does it work ---- */
 
-.how {
-  height: 100vh;
+.how{
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: pink;
+
+}
+
+.plans{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(215, 228, 158);
 
 }
 
@@ -91,6 +105,45 @@ body {
   height: 8rem;
   margin: 1rem 2rem;
 }
+/* Get discount */
+.getDiscount {
+  text-align: center;
+  background-color: #eac5c5;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.getDiscount p{
+  margin: 0;
+}
+
+@media (max-width: 375px) {
+  
+}
+
+/* Get prize */
+
+.getPrizeContainer{
+  display: flex;
+  padding: 2.5rem;
+  background-color: rgb(215, 228, 158)
+}
+.getPrizePhoto{
+  /* width: 50% */
+}
+.getPrizePhoto img{
+  width: 100%;
+}
+
+.getPrizeText{
+  padding-top: 5rem;
+}
+.getPrizeText button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  background-color: pink;
+  color: grey;
+}
 
 /* ---- Footer ---- */
 .foot {
@@ -105,13 +158,14 @@ body {
 .foot-compo {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   height: 1.2rem;
+  text-align: right;
+  padding: 1rem
 }
 
-.foot-compo a {
+.foot-compo a{
   text-decoration: none;
+  padding: 0.1rem
 }
 
 .foot-sn {
@@ -125,14 +179,21 @@ body {
   height: 1.5rem;
   margin: 1rem;
 }
+<<<<<<< HEAD
+=======
 
 /* ---- Plan ---- */
 .plan-cards {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   justify-content: space-around;
 }
 
 .plan-card {
   cursor: pointer;
 }
+=======
+}
+>>>>>>> 1ca85f8b9a96553d5258e83e9a7471b1c3b9907c
+>>>>>>> b71b4c1f8ed15d813ea75eaff16e1ed72c566830
