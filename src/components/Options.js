@@ -40,10 +40,11 @@ class Options extends Component {
     if (!this.state.loading) {
       return (
         <div className="options-container">
+          <h2>Here you can chose you <span className="title-hero">free flight!</span></h2>
           {this.state.randomFlights.map((flight, index) => {
             return(<TripSegment
               key={`id:${index}`}
-              carrier={flight.countryFrom}
+              carrier={flight.airlines[0]}
               departure={flight.cityFrom}
               arrival={flight.cityTo}
               onClick={() => {

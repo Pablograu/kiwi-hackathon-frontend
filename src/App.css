@@ -364,10 +364,13 @@ p.code {
 .winner-section div {
   margin: auto;
 }
+.winner-section button {
+  margin: auto;
+}
 
 .winner-section p {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -423,7 +426,7 @@ p.code {
 }
 
 .options-container {
-  height: 75vh;
+  height: 70vh;
   width: 60%;
   margin: auto;
   margin-top: 100px;

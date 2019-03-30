@@ -18,14 +18,14 @@ export default class CountDown extends Component {
       const minutesUpdare = this.state.minutes
       if (minutesUpdare === 0) {
         this.setState({
-          seconds: 60,
+          minuts: 60,
         })
       } else {
         this.setState({
           minutes: minutesUpdare-1
         })
       }
-    }, 10000)
+    }, 100000)
   }
 
   startSeconds = () => {
