@@ -1,0 +1,93 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+/* ---- NavBar ---- */
+
+.NavBar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.NavBar img {
+  height: 3rem;
+}
+
+.nav-link {
+  margin: 0 1rem;
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.hero-text {
+  height: 70vh;
+  padding: 0 7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 2rem;
+
+}
+
+.hero img {
+  height: 70vh;
+}
+
+/* ---- How does it work ---- */
+
+.how {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.how-boxes {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+}
+
+.how-box {
+  margin: 1rem 2rem;
+}
+
+.how-box img {
+  height: 8rem;
+  margin: 1rem 2rem;
+}
