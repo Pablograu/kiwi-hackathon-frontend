@@ -4,10 +4,14 @@ export default function Footer() {
   return (
     <div className="foot">
       <div className="foot-compo">
-        <a href="">Privacy</a>
-        <a href="">Hmm.. Cookies</a>
-        <a href="">Terms and Conditions</a>
-        <h5>Sunrise©2019</h5>
+        <div className="links-foot">
+          <a href="">Privacy</a>
+          <a href="">Hmm.. Cookies</a>
+          <a href="">Terms and Conditions</a>
+        </div>
+        <div className="flykiwi">
+          <h5>FlyKiwi©2019</h5>
+        </div>
       </div>
       <div className="foot-sn">
         <img src="facebook.svg" alt="facebook" />

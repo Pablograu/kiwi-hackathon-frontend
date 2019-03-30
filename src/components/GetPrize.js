@@ -3,8 +3,8 @@ import { Button } from "@kiwicom/orbit-components/lib";
 
 export default function GetPrize() {
   return (
-    <div className="getPrizeContainer">
-      <div className="getPrizeText">
+    <div className="hero">
+      <div className="hero-text getPrizeText">
         <h2>Travel prize</h2>
         <p>
           With Sunrise you get great discounts in kiwi.com and the AWESOME

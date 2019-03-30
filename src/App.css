@@ -76,6 +76,10 @@ h3 {
   height: 70vh;
 }
 
+.hero-text p {
+  margin-bottom: 1.7rem;
+}
+
 /* ---- How does it work ---- */
 
 .how {
@@ -106,12 +110,38 @@ h3 {
 
 .how-box {
   margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .how-box img {
-  height: 8rem;
   margin: 1rem 2rem;
+  height: 10rem;
+  width: 10rem;
+  align-self: center;
 }
+
+/* Plan */
+.plan-boxes {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+
+}
+
+.plan-box {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-box img {
+  margin: 1rem 2rem;
+  height: 10rem;
+  width: 10rem;
+  align-self: center;
+}
+
 
 /* Get discount */
 .getDiscount {
@@ -143,7 +173,7 @@ h3 {
 }
 
 .getPrizeText {
-  padding-top: 5rem;
+  padding: 0 4rem;
 }
 
 .getPrizeText button {
@@ -158,8 +188,9 @@ h3 {
   display: flex;
   flex-direction: column;
   bottom: 0;
-  justify-content: space-around;
+  justify-content: space-between;
   position: sticky;
+  background-color: white;
 }
 
 .foot-compo {
@@ -167,13 +198,20 @@ h3 {
   flex-direction: row;
   height: 1.2rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1.2rem 0 0.2rem 0;
 }
 
-.foot-compo a {
+.flykiwi {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+
+.links-foot a {
   text-decoration: none;
-  padding: 0.1rem
+  padding: 0 2rem;
+  color: grey
 }
 
 .foot-sn {
@@ -181,6 +219,10 @@ h3 {
   flex-direction: row;
   align-items: baseline;
   justify-content: center;
+}
+
+.links-foot {
+  width: 100%;
 }
 
 .foot-sn img {
@@ -195,11 +237,11 @@ h3 {
   cursor: pointer;
 }
 
-.countdown-section{
+.countdown-section {
   height: 30vh;
 }
 
-.countdown-section .title{
+.countdown-section .title {
   font-size: 24px;
   text-align: center;
   font-weight: bold;
@@ -234,12 +276,12 @@ h3 {
   font-weight: bold;
 }
 
-.code-section div{
+.code-section div {
   margin: auto;
   width: 30%;
 }
 
-.code-section p{
+.code-section p {
   margin-bottom: 20px;
   font-size: 12px;
 }
@@ -257,7 +299,7 @@ h3 {
   text-decoration: underline;
 }
 
-p.code{
+p.code {
   margin: auto;
   margin-bottom: 0;
   font-size: 24px;
@@ -270,23 +312,23 @@ p.code{
   height: 25vh;
 }
 
-.winner-section{
+.winner-section {
   height: 30vh;
   display: flex;
   text-align: center;
 }
 
-.winner-section div{
+.winner-section div {
   margin: auto;
 }
 
-.winner-section p{
+.winner-section p {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 400;
 }
 
-.winner-section p:nth-child(2){
+.winner-section p:nth-child(2) {
   margin-bottom: 20px;
 }
 
