@@ -3,19 +3,15 @@ import axios from 'axios';
 class TequilaLocationsService {
   constructor() {
     this.locations = axios.create({
-      baseURL: process.env.TEQUILA_API_LOCATIONS_URL,
+      baseURL: 'https://kiwicom-prod.apigee.net/locations',
       headers: {
-        apikey: process.env.TEQUIL_API_KEY,
+        apikey: '2RnUGMIDtFIG0Sh4Phufa5D7GROgaou6',
       }
     })
   }
 
-  checkFlights(query) {
-    const {term, location_type, limit,  } = query;
-    return this.booking.get(`/query?
-    term=Barcelona&
-    location_types=city&
-    limit=10`,)
+  checkFlights(term, type) {
+    return this.locations.get(`/query?term=${term}&location_types=${type}&limit=10`,)
       .then(({ data }) => data);
   }
 }

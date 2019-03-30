@@ -5,7 +5,7 @@ class TequilaBookingService {
     this.booking = axios.create({
       baseURL: process.env.TEQUILA_API_BOOKING_URL,
       headers: {
-        apikey: process.env.TEQUIL_API_KEY,
+        apikey: '2RnUGMIDtFIG0Sh4Phufa5D7GROgaou6',
       }
     })
   }

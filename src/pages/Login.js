@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import { withAuth } from '../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { withAuth } from "../providers/AuthProvider";
+import { Link } from "react-router-dom";
+import { Button, InputField } from "@kiwicom/orbit-components/lib";
 
 class Login extends Component {
   state = {
     username: "",
-    password: "",
-  }
+    password: ""
+  };
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit = event => {
     event.preventDefault();
-    const { username, password } = this.state
+    const { username, password } = this.state;
 
-    this.props.login({ username, password })
+    this.props
+      .login({ username, password })
       .then(() => {})
-      .catch( error => console.log(error) )
-  }
+      .catch(error => console.log(error));
+  };
 
   handleChange = (event) => {  
     const {name, value} = event.target;
@@ -25,19 +27,35 @@ class Login extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Login" />
+      <div style={{ height: "80vh" }}>
+        <form className="access-form">
+          <h2 style={{ marginBottom: "2rem" }}>Welcome back, please Log in</h2>
+          <InputField
+            label="Username"
+            type="text"
+            name="username"
+            value={username}
+            placeholder="Placeholder"
+            onChange={this.handleChange}
+            required
+          />
+          <InputField
+            type="password"
+            label="Password"
+            name="password"
+            value={password}
+            placeholder="Password"
+            onChange={this.handleChange}
+            required
+          />
+          <Button onClick={this.handleFormSubmit}>LOGIN</Button>
+          <p>
+            You don't have an account?
+            <Link to={"/signup"}> SignUp</Link>
+          </p>
         </form>
-        <p>You don't have an account? 
-          <Link to={"/signup"}> SignUp</Link>
-        </p>
       </div>
-    )
+    );
   }
 }
 

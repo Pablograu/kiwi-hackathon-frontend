@@ -1,47 +1,146 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withAuth } from '../providers/AuthProvider';
+import React, { Component } from "react";
+import { withAuth } from "../providers/AuthProvider";
+import SignupForm from "../components/SignupForm";
+import PlanForm from "../components/PlanForm";
+import PreferencesForm from "../components/PreferencesForm";
+import tequilaLocationsService from "../lib/tequila-locations-service";
 
 class Signup extends Component {
-
   state = {
     username: "",
     email: "",
     password: "",
+    step: 1,
+    subscriptionType: "Standard",
+    startingPoint: "",
+    selectedContinent: "",
+    queryListCitites: [],
+    queryListContinents: []
   };
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit = event => {
     event.preventDefault();
-    const {username, email, password} = this.state;
-    this.props.signup({ username, email, password })
-      .catch(error => console.log(error) )
-  }
+    const {
+      username,
+      email,
+      password,
+      subscriptionType,
+      startingPoint
+    } = this.state;
+    this.props
+      .signup({ username, email, password, subscriptionType, startingPoint })
+      .catch(error => console.log(error));
+  };
 
-  handleChange = (event) => {  
-    const {name, value} = event.target;
-    this.setState({[name]: value});
-  }
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  handleChangeCities = event => {
+    this.handleChange(event);
+    const { value } = event.target;
+    tequilaLocationsService
+      .checkFlights(value, "city")
+      .then(data => {
+        this.setState({
+          queryListCitites: data.locations
+        });
+      })
+      .catch(error => console.log(error));
+  };
+
+  handleChangeContinents = event => {
+    this.handleChange(event);
+    const { value } = event.target;
+    tequilaLocationsService
+      .checkFlights(value, "continent")
+      .then(data => {
+        console.log(data);
+        this.setState({
+          queryListContinents: data.locations
+        });
+      })
+      .catch(error => console.log(error));
+  };
+
+  handleNextStep = () => {
+    const currentStep = this.state.step;
+    this.setState({
+      step: currentStep + 1
+    });
+  };
+
+  handleClickCity = locationName => {
+    console.log(locationName);
+    this.setState({
+      queryListCitites: [],
+      startingPoint: locationName
+    });
+  };
+
+  handleClickContinent = continentName => {
+    console.log(continentName);
+    this.setState({
+      queryListContinents: [],
+      selectedContinent: continentName
+    });
+  };
+
+  handleChangePlan = plan => {
+    const currentStep = this.state.step;
+    console.log(plan);
+    this.setState({
+      step: currentStep + 1,
+      plan: plan
+    });
+  };
 
   render() {
-    const { username, email, password } = this.state;
-    return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
-          <label>Email:</label>
-          <input type="email" name="email" value={email} onChange={this.handleChange} />
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Signup" />
-        </form>
-
-        <p>Already have account? 
-          <Link to={"/login"}> Login</Link>
-        </p>
-
-      </div>
-    )
+    const {
+      username,
+      email,
+      password,
+      step,
+      subscriptionType,
+      queryListCitites,
+      startingPoint,
+      queryListContinents,
+      selectedContinent
+    } = this.state;
+    if (step === 1) {
+      return (
+        <SignupForm
+          username={username}
+          email={email}
+          password={password}
+          handleChange={this.handleChange}
+          handleNextStep={this.handleNextStep}
+        />
+      );
+    } else if (step === 2) {
+      return (
+        <PlanForm
+          handleChangePlan={this.handleChangePlan}
+          handleNextStep={this.handleNextStep}
+        />
+      );
+    } else if (step === 3) {
+      return (
+        <PreferencesForm
+          subscriptionType={subscriptionType}
+          handleFormSubmit={this.handleFormSubmit}
+          handleChangeCities={this.handleChangeCities}
+          handleChangeContinents={this.handleChangeContinents}
+          queryListCitites={queryListCitites}
+          queryListContinents={queryListContinents}
+          handleClickCity={this.handleClickCity}
+          handleClickContinent={this.handleClickContinent}
+          startingPoint={startingPoint}
+          selectedContinent={selectedContinent}
+        />
+      );
+    }
   }
 }
 

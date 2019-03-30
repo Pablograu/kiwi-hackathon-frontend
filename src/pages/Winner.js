@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { withAuth } from '../providers/AuthProvider';
-import CountDown from '../components/CountDown'
+import WinnerSection from '../components/WinnerSection'
 import CodeSection from '../components/CodeSection'
 import UpgradeSection from '../components/UpgradeSection'
 
-class Private extends Component {
+class Winner extends Component {
+
+  handleClick = () => {
+    this.props.history.push('/booking')
+  }
+
   render() {
     return (
       <div>
-        <CountDown/>
+        <WinnerSection handleClick={this.handleClick}/>
         <CodeSection/>
         <UpgradeSection/>
       </div>
@@ -16,4 +21,4 @@ class Private extends Component {
   }
 }
 
-export default withAuth(Private);
+export default withAuth(Winner);
