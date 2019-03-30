@@ -91,3 +91,7 @@ body {
   height: 8rem;
   margin: 1rem 2rem;
 }
+/* Get discount */
+.getDiscount {
+  text-align: center;
+}
