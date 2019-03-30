@@ -12,7 +12,7 @@ class SignupForn extends Component {
       handleNextStep
     } = this.props;
     return (
-      <div style={{ height: "80vh" }}>
+      <div className="signup-form" style={{ height: "80vh" }}>
         <form className="access-form">
           <h2 style={{ marginBottom: "2rem" }}>Please sign up</h2>
           <InputField
@@ -44,11 +44,11 @@ class SignupForn extends Component {
             required
           />
           <Button onClick={handleNextStep}>NEXT</Button>
+        </form>
           <p>
             Already have account?
             <Link to={"/login"}> Login</Link>
           </p>
-        </form>
       </div>
     );
   }

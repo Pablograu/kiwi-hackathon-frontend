@@ -389,6 +389,17 @@ p.code {
   color: white;
 }
 
+.access-form p{
+  border: solid 0.2px rgb(205, 204, 204);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+.access-form p:hover {
+  background-color: #ccc;
+}
+
 .dateForm {
   height: 75vh;
   width: 60%;
@@ -405,4 +416,10 @@ p.code {
   width: 60%;
   margin: auto;
   margin-top: 100px;
+}
+
+.signup-form p{
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 50px;
 }
