@@ -96,6 +96,10 @@ body {
 .foot {
   display: flex;
   flex-direction: column;
+  bottom: 0;
+  justify-content: space-around;
+  position: sticky;
+  background-color: white;
 }
 
 .foot-compo {
@@ -131,8 +135,4 @@ body {
 
 .plan-card {
   cursor: pointer;
-}
-
-.plan-card:active {
-  border-color: red;
 }
