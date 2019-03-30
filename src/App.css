@@ -19,8 +19,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
-
+  font-family: 'Roboto', sans-serif;
 }
 
 /* ---- NavBar ---- */
@@ -32,6 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
+  background-color: white;
 }
 
 .NavBar img {
@@ -123,4 +123,34 @@ body {
   border-style: none;
   background-color: pink;
   color: grey;
+}
+
+/* ---- Footer ---- */
+.foot {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot-compo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 1.2rem;
+}
+
+.foot-compo a {
+  text-decoration: none;
+}
+
+.foot-sn {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.foot-sn img {
+  height: 1.5rem;
+  margin: 1rem;
 }
