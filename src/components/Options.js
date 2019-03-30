@@ -42,9 +42,10 @@ class Options extends Component {
         <div className="options-container">
           <h2>Here you can chose you <span className="title-hero">free flight!</span></h2>
           {this.state.randomFlights.map((flight, index) => {
+            console.log(flight)
             return(<TripSegment
               key={`id:${index}`}
-              carrier={flight.cityTo}
+              carrier={flight.countryTo}
               departure={flight.cityFrom}
               arrival={flight.cityTo}
               onClick={() => {
